@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material para Víctimas | Cosiendo Alas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azulOceano: '#653a82',     
+                        verdeEsperanza: '#42c3d9', 
+                        doradoSuave: '#fcc352',    
+                        grisAntracita: '#2b1045',  
+                        moradoMedio: '#8e62b1',
+                        azulCielo: '#53a0cc',
+                        turquesaClaro: '#5dcad4',
+                        lavandaSuave: '#afb0de',
+                        fondoPagina: '#f8f6fb', 
+                    },
+                    fontFamily: {
+                        titulo1: ['Playfair Display', 'serif'],
+                        subtitulo: ['Montserrat', 'sans-serif'],
+                        texto: ['Source Sans Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #2b1045 0%, #653a82 50%, #42c3d9 100%); }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(101, 58, 130, 0.15); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between h-full items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <img class="h-10 w-10 object-contain transition-transform group-hover:scale-110" src="home.svg" alt="Logo" onerror="this.src='https://placehold.co/100x100?text=CA'; this.style.borderRadius='50%'">
+                    <div>
+                        <span class="block font-subtitulo font-extrabold text-xl text-azulOceano tracking-wide">COSIENDO ALAS</span>
+                        <span class="block text-xs font-bold text-verdeEsperanza tracking-widest uppercase">Recursos para ti</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="px-4 py-2 border-2 border-azulOceano text-azulOceano font-bold rounded-full hover:bg-azulOceano hover:text-white transition text-sm">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient pt-32 pb-16 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-turquesaClaro opacity-20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 text-white rounded-full mb-6 backdrop-blur-sm">
+                <i class="fa-solid fa-seedling text-3xl"></i>
+            </div>
+            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-white mb-4">Material para ti</h1>
+            <p class="font-subtitulo text-lg text-gray-100 max-w-2xl mx-auto leading-relaxed">
+                El trauma altera cómo nos sentimos en nuestro propio cuerpo. Aquí encontrarás herramientas, lecturas y ejercicios a tu propio ritmo para reconectar contigo.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full space-y-20">
+        
+        <section class="fade-in max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border-t-4 border-doradoSuave text-center">
+            <h2 class="font-titulo1 italic text-3xl text-azulOceano mb-4">Tu proceso no es lineal, y eso está bien.</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                Habrá días donde sientas que avanzas y otros donde el dolor parezca regresar. <strong>No estás retrocediendo, es parte del proceso.</strong> Los recursos en esta página están pensados para acompañarte en ambas etapas. No tienes que leerlos todos de golpe; toma lo que te sirva hoy y deja el resto para después.
+            </p>
+        </section>
+
+        <section class="fade-in scroll-mt-24" id="lecturas">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="font-subtitulo font-bold text-3xl text-grisAntracita">
+                    <i class="fa-solid fa-book-open text-turquesaClaro mr-2"></i>Lecturas para Entender el Trauma
+                </h2>
+                <div class="h-1 bg-gray-200 flex-grow rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-purple-50 text-azulOceano rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2">Por qué te paralizaste (Freeze response)</h3>
+                    <p class="text-gray-600 leading-relaxed flex-grow text-sm">
+                        La cultura nos enseña que debemos pelear o huir, pero la inmovilidad es la respuesta más común de supervivencia del cerebro humano ante el terror extremo. Entiende por qué tu cuerpo te protegió así.
+                    </p>
+                    <a href="#" class="mt-4 text-azulOceano font-bold text-sm hover:text-verdeEsperanza transition inline-flex items-center">Leer artículo <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-yellow-50 text-doradoSuave rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-hands-bubbles"></i>
+                    </div>
+                    <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2">Desmontando la Culpa</h3>
+                    <p class="text-gray-600 leading-relaxed flex-grow text-sm">
+                        "¿Y si no hubiera tomado eso?", "¿Y si no hubiera ido?". La culpa es una herramienta psicológica que usamos para intentar recuperar el control de algo que nunca estuvo en nuestras manos.
+                    </p>
+                    <a href="#" class="mt-4 text-doradoSuave font-bold text-sm hover:text-azulOceano transition inline-flex items-center">Leer artículo <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-cyan-50 text-verdeEsperanza rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2">El cansancio después de la tormenta</h3>
+                    <p class="text-gray-600 leading-relaxed flex-grow text-sm">
+                        El agotamiento físico crónico es una secuela real del trauma. Tu sistema nervioso ha corrido un maratón invisible. Aprende la importancia del descanso radical.
+                    </p>
+                    <a href="#" class="mt-4 text-verdeEsperanza font-bold text-sm hover:text-azulOceano transition inline-flex items-center">Leer artículo <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in scroll-mt-24" id="grounding">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="font-subtitulo font-bold text-3xl text-grisAntracita">
+                    <i class="fa-solid fa-anchor text-moradoMedio mr-2"></i>Ejercicios de Regulación Emocional
+                </h2>
+                <div class="h-1 bg-gray-200 flex-grow rounded-full"></div>
+            </div>
+            
+            <p class="text-gray-700 mb-8 max-w-3xl">Cuando los recuerdos intrusivos (flashbacks) o la ansiedad te abrumen, tu cerebro cree que el peligro está ocurriendo en el presente. Estos ejercicios te ayudarán a decirle a tu cuerpo: <strong>"Estoy aquí, estoy a salvo ahora"</strong>.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-azulOceano text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-white opacity-5 rounded-full -mr-10 -mt-10 blur-2xl"></div>
+                    <h3 class="font-titulo1 italic text-2xl text-doradoSuave mb-4">Técnica 5-4-3-2-1</h3>
+                    <p class="mb-6 font-texto text-gray-200">Encuentra una posición cómoda, respira profundo y nombra en voz alta (o en tu mente):</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold">5</div> <span>Cosas que puedes <strong>ver</strong> a tu alrededor.</span></li>
+                        <li class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold">4</div> <span>Cosas que puedes <strong>tocar</strong> (siente la textura).</span></li>
+                        <li class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold">3</div> <span>Cosas que puedes <strong>escuchar</strong>.</span></li>
+                        <li class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold">2</div> <span>Cosas que puedes <strong>oler</strong>.</span></li>
+                        <li class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold">1</div> <span>Cosa que puedes <strong>saborear</strong>.</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border-2 border-verdeEsperanza p-8 rounded-2xl shadow-sm relative">
+                    <h3 class="font-subtitulo font-bold text-2xl text-verdeEsperanza mb-4">Respiración de Caja</h3>
+                    <p class="text-gray-600 mb-6 font-texto">Esta técnica ayuda a reducir la frecuencia cardíaca y a calmar el sistema nervioso central. Imagina que dibujas un cuadrado con tu respiración.</p>
+                    <div class="flex flex-col items-center justify-center mt-4">
+                        <div class="w-48 h-48 border-4 border-dashed border-verdeEsperanza rounded-xl flex items-center justify-center p-4 text-center">
+                            <p class="text-gray-500 font-bold text-sm">
+                                1. Inhala (4 seg)<br>
+                                2. Sostén (4 seg)<br>
+                                3. Exhala (4 seg)<br>
+                                4. Sostén (4 seg)
+                            </p>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4 text-center">Repite el ciclo 4 veces o hasta que te sientas más tranquila.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in scroll-mt-24" id="descargables">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="font-subtitulo font-bold text-3xl text-grisAntracita">
+                    <i class="fa-solid fa-file-pdf text-red-500 mr-2"></i>Herramientas Descargables
+                </h2>
+                <div class="h-1 bg-gray-200 flex-grow rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-gray-200 hover:shadow-md transition group">
+                    <div class="w-14 h-14 bg-red-50 text-red-500 rounded-lg flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-red-500 group-hover:text-white transition">
+                        <i class="fa-regular fa-file-pdf"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-azulOceano">Mi Plan de Seguridad Emocional</h4>
+                        <p class="text-sm text-gray-500 mb-2">Una hoja para llenar con tus contactos de confianza, cosas que te calman y recordatorios importantes.</p>
+                        <a href="#" class="text-xs font-bold text-red-500 uppercase tracking-wide hover:underline">Descargar PDF</a>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-gray-200 hover:shadow-md transition group">
+                    <div class="w-14 h-14 bg-red-50 text-red-500 rounded-lg flex items-center justify-center text-2xl flex-shrink-0 group-hover:bg-red-500 group-hover:text-white transition">
+                        <i class="fa-regular fa-file-pdf"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-azulOceano">Diario de Emociones y Gatilladores</h4>
+                        <p class="text-sm text-gray-500 mb-2">Formato para registrar qué detona tu ansiedad en el día a día, útil para llevar a tu terapia.</p>
+                        <a href="#" class="text-xs font-bold text-red-500 uppercase tracking-wide hover:underline">Descargar PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h3 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h3>
+                    </div>
+                    <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
+                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto</h4>
+                    <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
+                            <a href="https://wa.me/525535538561" target="_blank" class="hover:text-white transition">55 3553 8561</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

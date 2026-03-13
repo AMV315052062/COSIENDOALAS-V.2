@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio Institucional | Cosiendo Alas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azulOceano: '#653a82',     
+                        verdeEsperanza: '#42c3d9', 
+                        doradoSuave: '#fcc352',    
+                        grisAntracita: '#2b1045',  
+                        moradoMedio: '#8e62b1',
+                        azulCielo: '#53a0cc',
+                        turquesaClaro: '#5dcad4',
+                        lavandaSuave: '#afb0de',
+                        fondoPagina: '#f8f6fb', 
+                    },
+                    fontFamily: {
+                        titulo1: ['Playfair Display', 'serif'],
+                        subtitulo: ['Montserrat', 'sans-serif'],
+                        texto: ['Source Sans Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #2b1045 0%, #653a82 50%, #42c3d9 100%); }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between h-full items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <img class="h-10 w-10 object-contain transition-transform group-hover:scale-110" src="home.svg" alt="Logo" onerror="this.src='https://placehold.co/100x100?text=CA'; this.style.borderRadius='50%'">
+                    <div>
+                        <span class="block font-subtitulo font-extrabold text-xl text-azulOceano tracking-wide">COSIENDO ALAS</span>
+                        <span class="block text-xs font-bold text-verdeEsperanza tracking-widest uppercase">Directorio</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="px-4 py-2 border-2 border-azulOceano text-azulOceano font-bold rounded-full hover:bg-azulOceano hover:text-white transition text-sm">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient pt-32 pb-16 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-turquesaClaro opacity-20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-white mb-4">Directorio Institucional</h1>
+            <p class="font-subtitulo text-lg text-gray-100 max-w-2xl mx-auto leading-relaxed">
+                Encuentra las instancias de apoyo, procuración de justicia y asesoría legal en México organizadas por categoría.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full space-y-6">
+
+        <section class="bg-white rounded-2xl shadow-md border-2 border-doradoSuave overflow-hidden fade-in">
+            <div class="flex items-center justify-between p-6 cursor-pointer bg-yellow-50 hover:bg-yellow-100 transition" onclick="toggleSection('cdmx-content', 'cdmx-icon')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-doradoSuave shadow-sm">
+                        <i class="fa-solid fa-city text-2xl"></i>
+                    </div>
+                    <h2 class="font-subtitulo font-bold text-2xl text-grisAntracita">Red de Apoyo en Ciudad de México</h2>
+                </div>
+                <i id="cdmx-icon" class="fa-solid fa-chevron-down text-xl text-grisAntracita transition-transform duration-300 transform rotate-180"></i>
+            </div>
+            
+            <div id="cdmx-content" class="p-6 border-t border-doradoSuave bg-fondoPagina">
+                
+                <div class="bg-azulOceano text-white rounded-xl p-6 shadow-lg mb-8 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full -mr-10 -mt-10 blur-2xl"></div>
+                    <h3 class="font-subtitulo font-bold text-2xl text-doradoSuave mb-2"><i class="fa-solid fa-dove mr-2"></i>Cosiendo Alas</h3>
+                    <p class="text-gray-200 mb-6 font-texto text-lg">Tu primera red de apoyo. Te brindamos orientación legal y acompañamiento humano sin revictimización.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="https://wa.me/525535538561" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-3 rounded-lg transition">
+                            <i class="fa-brands fa-whatsapp text-2xl text-verdeEsperanza"></i>
+                            <span class="font-bold">55 3553 8561</span>
+                        </a>
+                        <a href="mailto:cosiendo.tus.alas@gmail.com" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-3 rounded-lg transition">
+                            <i class="fa-regular fa-envelope text-2xl text-verdeEsperanza"></i>
+                            <span class="font-bold break-all">cosiendo.tus.alas@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-lg text-azulOceano border-b pb-2 mb-3"><i class="fa-solid fa-moon text-moradoMedio mr-2"></i>LUNAS (Atención Territorial)</h4>
+                        <p class="text-sm text-gray-600 mb-2">Atención psicológica y jurídica gratuita (Lun-Vie 9:00 a 17:00).</p>
+                        <p class="text-sm font-bold text-grisAntracita"><i class="fa-solid fa-phone mr-1"></i> Gral: 55 5512 2836 ext. 502</p>
+                        <ul class="text-sm text-gray-600 mt-2 space-y-1">
+                            <li><strong>Álvaro Obregón 1:</strong> 55 5272 4060</li>
+                            <li><strong>Azcapotzalco:</strong> 55 1716 0998</li>
+                            <li><strong>Benito Juárez:</strong> 55 5579 0206</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-lg text-azulOceano border-b pb-2 mb-3"><i class="fa-solid fa-scale-balanced text-moradoMedio mr-2"></i>Fiscalías Especializadas (FDS)</h4>
+                        <p class="text-sm text-gray-600 mb-2">Recepción de denuncias e inicio de carpetas de investigación.</p>
+                        <ul class="text-sm text-gray-600 mt-2 space-y-2">
+                            <li><strong>Sede Central (Doctores):</strong> 55 5346 8110 / 55 5346 8480</li>
+                            <li><strong>FDS-1 (Cuauhtémoc):</strong> 55 5345 5399</li>
+                            <li><strong>FDS-2 (Álvaro Obregón):</strong> 55 5200 9568</li>
+                            <li><strong>FDS-5 (Iztapalapa):</strong> 55 5345 5657</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-lg text-azulOceano border-b pb-2 mb-3"><i class="fa-solid fa-graduation-cap text-moradoMedio mr-2"></i>Unidad Estudiantil & CTA</h4>
+                        <p class="text-sm text-gray-600 mb-2">Centro de Terapia de Apoyo y unidad exclusiva para acoso a estudiantes. Personal 100% femenino.</p>
+                        <p class="text-sm text-gray-600"><strong>Dir:</strong> Enrique Pestalozzi No. 1115, Col. Del Valle.</p>
+                        <p class="text-sm font-bold text-grisAntracita mt-2"><i class="fa-solid fa-phone mr-1"></i> Tels: 55 5200 9632 / 55 5200 9633</p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-lg text-azulOceano border-b pb-2 mb-3"><i class="fa-solid fa-hand-holding-heart text-moradoMedio mr-2"></i>CEAVI & CAVI</h4>
+                        <p class="text-sm text-gray-600 mb-2">Atención a la violencia intrafamiliar y reparación de daños.</p>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li><strong>CEAVI (Apoyo Integral):</strong> 55 1000 2000 (ext. 57578)</li>
+                            <li><strong>CAVI (Emergencia Intrafamiliar):</strong> 55 5345 5248</li>
+                            <li><strong>Abogadas en el MP:</strong> 55 5512 2836 ext. 402</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden fade-in">
+            <div class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition" onclick="toggleSection('emergencia-content', 'emergencia-icon')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center text-red-500">
+                        <i class="fa-solid fa-phone-volume text-2xl"></i>
+                    </div>
+                    <h2 class="font-subtitulo font-bold text-2xl text-grisAntracita">Líneas de Emergencia Nacionales</h2>
+                </div>
+                <i id="emergencia-icon" class="fa-solid fa-chevron-down text-xl text-gray-400 transition-transform duration-300"></i>
+            </div>
+            
+            <div id="emergencia-content" class="hidden p-6 border-t border-gray-100 bg-gray-50">
+                <ul class="space-y-4">
+                    <li class="bg-white p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
+                        <h4 class="font-bold text-lg text-red-600">911 - Emergencias Policiales y Médicas</h4>
+                        <p class="text-gray-600 mt-1">Línea nacional para despachar patrullas o ambulancias en incidentes de riesgo vital en progreso.</p>
+                    </li>
+                    <li class="bg-white p-4 rounded-lg border-l-4 border-verdeEsperanza shadow-sm">
+                        <h4 class="font-bold text-lg text-azulOceano">079 (Opción 1) - Línea Bienestar para las Mujeres</h4>
+                        <p class="text-gray-600 mt-1">Línea federal (24/7). Atendida por abogadas y psicólogas para contención emocional en crisis y orientación jurídica paso a paso.</p>
+                    </li>
+                    <li class="bg-white p-4 rounded-lg border-l-4 border-azulCielo shadow-sm">
+                        <h4 class="font-bold text-lg text-azulOceano">075 y 070 - Asistencia Estatal / Locatel</h4>
+                        <p class="text-gray-600 mt-1">El 075 opera en estados como Guanajuato, Michoacán y Veracruz para apoyo psicológico. El 070 (Locatel) sirve en CDMX y NL para derivación institucional confidencial.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden fade-in">
+            <div class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition" onclick="toggleSection('cjm-content', 'cjm-icon')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center text-moradoMedio">
+                        <i class="fa-solid fa-building-shield text-2xl"></i>
+                    </div>
+                    <h2 class="font-subtitulo font-bold text-2xl text-grisAntracita">Centros de Justicia para las Mujeres (CJM)</h2>
+                </div>
+                <i id="cjm-icon" class="fa-solid fa-chevron-down text-xl text-gray-400 transition-transform duration-300"></i>
+            </div>
+            
+            <div id="cjm-content" class="hidden p-6 border-t border-gray-100">
+                <p class="text-gray-600 mb-6">Ofrecen servicios multidisciplinarios bajo un mismo techo (MP, asesoría, peritajes, atención médica y psicológica) para evitar la revictimización secundaria.</p>
+                <div class="overflow-x-auto rounded-xl border border-gray-200">
+                    <table class="min-w-full text-left text-sm">
+                        <thead class="bg-gray-100 text-azulOceano border-b">
+                            <tr>
+                                <th class="px-4 py-3 font-bold">Estado</th>
+                                <th class="px-4 py-3 font-bold">Sede y Dirección</th>
+                                <th class="px-4 py-3 font-bold">Teléfono</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-gray-700">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Aguascalientes</td>
+                                <td class="px-4 py-3">Ave. Aguascalientes Ote No. 3114, Fracc. El Cedazo.</td>
+                                <td class="px-4 py-3">01 (449) 974 82 31</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Chihuahua</td>
+                                <td class="px-4 py-3">Edificio Paloma Angélica Escobar, Calle Rosales No. 1203 (Chihuahua) / Calzada Sanders No. 310 (Juárez)</td>
+                                <td class="px-4 py-3">01 (614) 429 33 00 Ext. 10723</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Estado de México</td>
+                                <td class="px-4 py-3">Andador Rotherdam No. 9, Cuautitlán Izcalli / Paseo Matlazincas 1100, Toluca.</td>
+                                <td class="px-4 py-3">01 (722) 283 20 07</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Jalisco</td>
+                                <td class="px-4 py-3">Calle Álvaro Alcázar No. 1480, Col. Jardines Alcalde, Guadalajara.</td>
+                                <td class="px-4 py-3">01 (33) 3030 54 50</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Oaxaca</td>
+                                <td class="px-4 py-3">Armenta y López 700, Col. Centro, Oaxaca de Juárez.</td>
+                                <td class="px-4 py-3">01 (951) 514 87 88</td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden fade-in">
+            <div class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition" onclick="toggleSection('imef-content', 'imef-icon')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-azulCielo">
+                        <i class="fa-solid fa-users text-2xl"></i>
+                    </div>
+                    <h2 class="font-subtitulo font-bold text-2xl text-grisAntracita">Instancias de Mujeres (IMEF)</h2>
+                </div>
+                <i id="imef-icon" class="fa-solid fa-chevron-down text-xl text-gray-400 transition-transform duration-300"></i>
+            </div>
+            
+            <div id="imef-content" class="hidden p-6 border-t border-gray-100">
+                <p class="text-gray-600 mb-6">El primer puerto de refugio si aún no estás lista para ir a una fiscalía. Proveen asesoría jurídica, albergue temporal y planes de seguridad.</p>
+                <div class="overflow-x-auto rounded-xl border border-gray-200">
+                    <table class="min-w-full text-left text-sm">
+                        <thead class="bg-gray-100 text-azulOceano border-b">
+                            <tr>
+                                <th class="px-4 py-3 font-bold">Entidad</th>
+                                <th class="px-4 py-3 font-bold">Institución y Dirección</th>
+                                <th class="px-4 py-3 font-bold">Teléfono</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-gray-700">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Estado de México</td>
+                                <td class="px-4 py-3">Secretaría de las Mujeres<br>Sebastián Lerdo de Tejada No. 300 Ext. 242, Toluca.</td>
+                                <td class="px-4 py-3">722 213 89 15 Ext. 123</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Jalisco</td>
+                                <td class="px-4 py-3">Secretaría de Igualdad Sustantiva entre Mujeres y Hombres<br>Francisco de Quevedo 169, Guadalajara.</td>
+                                <td class="px-4 py-3">333 658 31 70</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Nuevo León</td>
+                                <td class="px-4 py-3">Instituto Estatal de las Mujeres<br>5 de mayo No. 525 Ote. Piso 3, Monterrey.</td>
+                                <td class="px-4 py-3">812 020 97 73 Ext. 104</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden fade-in">
+            <div class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition" onclick="toggleSection('fiscalias-content', 'fiscalias-icon')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-cyan-50 rounded-full flex items-center justify-center text-verdeEsperanza">
+                        <i class="fa-solid fa-gavel text-2xl"></i>
+                    </div>
+                    <h2 class="font-subtitulo font-bold text-2xl text-grisAntracita">Fiscalías Especializadas Estatales</h2>
+                </div>
+                <i id="fiscalias-icon" class="fa-solid fa-chevron-down text-xl text-gray-400 transition-transform duration-300"></i>
+            </div>
+            
+            <div id="fiscalias-content" class="hidden p-6 border-t border-gray-100">
+                <div class="overflow-x-auto rounded-xl border border-gray-200">
+                    <table class="min-w-full text-left text-sm">
+                        <thead class="bg-gray-100 text-azulOceano border-b">
+                            <tr>
+                                <th class="px-4 py-3 font-bold">Estado</th>
+                                <th class="px-4 py-3 font-bold">Institución y Dirección</th>
+                                <th class="px-4 py-3 font-bold">Teléfono</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-gray-700">
+                            <tr class="hover:bg-gray-50 bg-blue-50/50">
+                                <td class="px-4 py-3 font-bold text-azulOceano">Jurisdicción Federal</td>
+                                <td class="px-4 py-3"><strong>FEVIMTRA (FGR)</strong><br>Para casos de macro-criminalidad o trata transnacional. Dr. Velasco 175, CDMX.</td>
+                                <td class="px-4 py-3">55 5346 0000</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Chihuahua</td>
+                                <td class="px-4 py-3">Fiscalía Especializada en Atención a Mujeres (FEM)<br>Av. Paseo Bolívar 712 Col. Centro, Chihuahua.</td>
+                                <td class="px-4 py-3">(614) 429 33 00</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Puebla</td>
+                                <td class="px-4 py-3">Fiscalía Especializada<br>3er Retorno de Osa Menor No. 3, San Andrés Cholula.</td>
+                                <td class="px-4 py-3">(222) 244 68 53</td>
+                            </tr>
+                             <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Veracruz</td>
+                                <td class="px-4 py-3">Unidad de Género y Fiscalías Especializadas Regionales<br>Circuito Guízar y Valencia #707, Xalapa.</td>
+                                <td class="px-4 py-3">(228) 841 61 70</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden fade-in">
+            <div class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition" onclick="toggleSection('asistencia-content', 'asistencia-icon')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-grisAntracita">
+                        <i class="fa-solid fa-scale-balanced text-2xl"></i>
+                    </div>
+                    <h2 class="font-subtitulo font-bold text-2xl text-grisAntracita">Asistencia Legal Adicional</h2>
+                </div>
+                <i id="asistencia-icon" class="fa-solid fa-chevron-down text-xl text-gray-400 transition-transform duration-300"></i>
+            </div>
+            
+            <div id="asistencia-content" class="hidden p-6 border-t border-gray-100 bg-gray-50">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-lg text-azulOceano border-b pb-2 mb-3">PROFEDET</h4>
+                        <p class="text-sm text-gray-600 mb-2">Defensa legal gratuita por acoso u hostigamiento laboral, y despidos por embarazo/discriminación.</p>
+                        <p class="font-bold text-verdeEsperanza"><i class="fa-solid fa-phone mr-1"></i> 800 717 29 42</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-lg text-azulOceano border-b pb-2 mb-3">Procuraduría Agraria (PA)</h4>
+                        <p class="text-sm text-gray-600">Defensa técnica para mujeres ejidatarias y comuneras que sufren violencia patrimonial o despojo de tierras.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-lg text-azulOceano border-b pb-2 mb-3">CEAV (Federal/Estatal)</h4>
+                        <p class="text-sm text-gray-600">Comisión Ejecutiva de Atención a Víctimas. Gestionan fondos de ayuda económica, gastos médicos y reparación del daño.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h3 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h3>
+                    </div>
+                    <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
+                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto</h4>
+                    <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
+                            <a href="https://wa.me/525535538561" target="_blank" class="hover:text-white transition">55 3553 8561</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSection(contentId, iconId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById(iconId);
+            
+            if (content.classList.contains('hidden')) {
+                // Abrir
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                // Cerrar
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>

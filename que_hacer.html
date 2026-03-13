@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué hacer tras una agresión? | Cosiendo Alas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azulOceano: '#653a82',     
+                        verdeEsperanza: '#42c3d9', 
+                        doradoSuave: '#fcc352',    
+                        grisAntracita: '#2b1045',  
+                        moradoMedio: '#8e62b1',
+                        azulCielo: '#53a0cc',
+                        turquesaClaro: '#5dcad4',
+                        lavandaSuave: '#afb0de',
+                        fondoPagina: '#f8f6fb', 
+                    },
+                    fontFamily: {
+                        titulo1: ['Playfair Display', 'serif'],
+                        subtitulo: ['Montserrat', 'sans-serif'],
+                        texto: ['Source Sans Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #2b1045 0%, #653a82 50%, #42c3d9 100%); }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(101, 58, 130, 0.15); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between h-full items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <img class="h-10 w-10 object-contain transition-transform group-hover:scale-110" src="home.svg" alt="Logo" onerror="this.src='https://placehold.co/100x100?text=CA'; this.style.borderRadius='50%'">
+                    <div>
+                        <span class="block font-subtitulo font-extrabold text-xl text-azulOceano tracking-wide">COSIENDO ALAS</span>
+                        <span class="block text-xs font-bold text-verdeEsperanza tracking-widest uppercase">Guía de Acción</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="px-4 py-2 border-2 border-azulOceano text-azulOceano font-bold rounded-full hover:bg-azulOceano hover:text-white transition text-sm">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient pt-32 pb-16 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-turquesaClaro opacity-20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-red-500 text-white rounded-full mb-6 shadow-lg">
+                <i class="fa-solid fa-triangle-exclamation text-3xl"></i>
+            </div>
+            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-white mb-4">¿Qué hacer tras una agresión?</h1>
+            <p class="font-subtitulo text-xl text-doradoSuave font-bold mb-4">Nada de esto es tu culpa. Respira.</p>
+            <p class="font-subtitulo text-lg text-gray-100 max-w-2xl mx-auto leading-relaxed">
+                Esta guía está diseñada para ayudarte a tomar decisiones en los primeros momentos. Toma el control a tu propio ritmo; estamos aquí para acompañarte.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full space-y-12">
+        
+        <section class="fade-in bg-white p-8 rounded-2xl shadow-sm border-l-8 border-verdeEsperanza text-center md:text-left flex flex-col md:flex-row items-center gap-6">
+            <div class="w-16 h-16 bg-green-50 text-verdeEsperanza rounded-full flex-shrink-0 flex items-center justify-center text-3xl">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <div>
+                <h2 class="font-subtitulo font-bold text-2xl text-grisAntracita mb-2">Lo primero: Estás a salvo</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Si estás en peligro inminente, llama al <strong>911</strong> o al <strong>079 (Opción 1)</strong> inmediatamente. Si ya estás en un lugar seguro, lee los siguientes pasos con calma. No tienes que hacerlo todo sola.
+                </p>
+            </div>
+        </section>
+
+        <section class="fade-in relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-transparent before:via-gray-200 before:to-transparent">
+            
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mb-12">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-red-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                    <span class="font-bold text-lg">1</span>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md border border-gray-100 card-hover">
+                    <h3 class="font-subtitulo font-bold text-xl text-red-500 mb-2"><i class="fa-solid fa-person-shelter mr-2"></i>Busca un lugar seguro</h3>
+                    <p class="text-gray-600 leading-relaxed">Aléjate del agresor o del lugar donde ocurrió el incidente lo antes posible. Dirígete a casa de una persona de confianza, un establecimiento público iluminado o una estación de policía.</p>
+                    <p class="text-gray-600 leading-relaxed mt-2"><strong>Contacta a tu red de apoyo:</strong> Llama a un familiar o amistad en quien confíes para que te acompañe físicamente.</p>
+                </div>
+            </div>
+
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mb-12">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-doradoSuave text-grisAntracita shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                    <span class="font-bold text-lg">2</span>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md border border-gray-100 card-hover">
+                    <h3 class="font-subtitulo font-bold text-xl text-doradoSuave mb-2"><i class="fa-solid fa-box-archive mr-2"></i>Preserva la evidencia</h3>
+                    <p class="text-gray-600 leading-relaxed mb-3">Sabemos que el primer instinto es querer limpiarse, pero si consideras presentar una denuncia, es vital recolectar pruebas médicas (idealmente dentro de las primeras 72 horas).</p>
+                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                        <li><strong>No te bañes</strong>, ni laves tus genitales.</li>
+                        <li><strong>No te laves los dientes</strong> ni enjuagues tu boca.</li>
+                        <li><strong>No te cambies de ropa.</strong> Si debes hacerlo, guarda la ropa que llevabas puesta en una <strong>bolsa de papel</strong> (no de plástico, ya que degrada el ADN).</li>
+                        <li>No limpies el lugar de los hechos si ocurrió en tu casa.</li>
+                        <li><strong>SI NO TE FUE POSIBLE HACER LO ANTERIOR, NO TE PREOCUPES.</strong> El trabajo de tu asesor/a jurídica es guiar la investigación para probar lo sucedido <strong>no es tu responsabilidad</strong>.</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mb-12">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-verdeEsperanza text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                    <span class="font-bold text-lg">3</span>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md border border-gray-100 card-hover">
+                    <h3 class="font-subtitulo font-bold text-xl text-verdeEsperanza mb-2"><i class="fa-solid fa-suitcase-medical mr-2"></i>Atención médica (NOM-046)</h3>
+                    <p class="text-gray-600 leading-relaxed">Acude a urgencias en un hospital público (como IMSS, ISSSTE, SSA) o a un Centro de Justicia para las Mujeres (CJM). La atención de las primeras horas es vital para tu salud.</p>
+                    <div class="bg-green-50 p-4 mt-3 rounded-lg border border-green-200">
+                        <p class="text-sm text-grisAntracita"><strong>Tienes derecho legal (NOM-046) a exigir:</strong></p>
+                        <ul class="list-disc pl-5 text-sm text-gray-600 mt-1">
+                            <li>Anticoncepción de emergencia (Pastilla del día siguiente) hasta 120 horas después.</li>
+                            <li>Profilaxis Post-Exposición (medicamentos para prevenir VIH y otras ITS) idealmente antes de las 72 horas.</li>
+                            <li><strong>NO es requisito haber denunciado previamente para recibir esta atención.</strong></li>
+                            <li><strong>ES OBLIGACIÓN DE LA INSTITUCIÓN PÚBLICA DE SALUD ATENDERTE DE INMEDIATO SI SOBREVIVISTE UNA VIOLACIÓN, MENCIONALO A LA ENFERMERO/A O MÉDICO/A</strong></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-azulOceano text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                    <span class="font-bold text-lg">4</span>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-md border border-gray-100 card-hover">
+                    <h3 class="font-subtitulo font-bold text-xl text-azulOceano mb-2"><i class="fa-solid fa-scale-balanced mr-2"></i>La denuncia formal</h3>
+                    <p class="text-gray-600 leading-relaxed">Denunciar es tu derecho, pero la decisión es completamente tuya y debe respetarse tu tiempo. Si decides hacerlo, es preferible acudir a una Fiscalía Especializada en Delitos Sexuales o a un Centro de Justicia para las Mujeres (CJM).</p>
+                    <a href="orientacion_juridica.html" class="inline-flex items-center mt-4 text-azulOceano font-bold hover:text-verdeEsperanza transition">
+                        Ver cómo funciona el proceso legal <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="fade-in bg-azulOceano p-8 md:p-12 rounded-3xl shadow-2xl text-center text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <img src="https://placehold.co/1000x500/ffffff/ffffff?text=Pattern" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-10">
+                <h2 class="font-titulo1 italic text-3xl md:text-4xl text-doradoSuave mb-4">No camines este tramo a solas</h2>
+                <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+                    En Cosiendo Alas podemos orientarte jurídicamente de manera gratuita, explicarte tus opciones y acompañarte a nivel humano para evitar que el sistema te revictimice.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/525535538561" target="_blank" class="px-8 py-4 bg-doradoSuave text-grisAntracita font-bold rounded-full hover:bg-white hover:text-azulOceano transition shadow-lg text-lg flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Contáctanos ahora
+                    </a>
+                    <a href="directorio.html" class="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-azulOceano transition text-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-address-book"></i> Ver instituciones locales
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h3 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h3>
+                    </div>
+                    <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
+                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto</h4>
+                    <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
+                            <a href="https://wa.me/525535538561" target="_blank" class="hover:text-white transition">55 3553 8561</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

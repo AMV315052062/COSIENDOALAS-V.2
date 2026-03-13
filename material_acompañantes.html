@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material para Acompañantes | Cosiendo Alas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azulOceano: '#653a82',     
+                        verdeEsperanza: '#42c3d9', 
+                        doradoSuave: '#fcc352',    
+                        grisAntracita: '#2b1045',  
+                        moradoMedio: '#8e62b1',
+                        azulCielo: '#53a0cc',
+                        turquesaClaro: '#5dcad4',
+                        lavandaSuave: '#afb0de',
+                        fondoPagina: '#f8f6fb', 
+                    },
+                    fontFamily: {
+                        titulo1: ['Playfair Display', 'serif'],
+                        subtitulo: ['Montserrat', 'sans-serif'],
+                        texto: ['Source Sans Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #2b1045 0%, #653a82 50%, #42c3d9 100%); }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(101, 58, 130, 0.15); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between h-full items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <img class="h-10 w-10 object-contain transition-transform group-hover:scale-110" src="home.svg" alt="Logo" onerror="this.src='https://placehold.co/100x100?text=CA'; this.style.borderRadius='50%'">
+                    <div>
+                        <span class="block font-subtitulo font-extrabold text-xl text-azulOceano tracking-wide">COSIENDO ALAS</span>
+                        <span class="block text-xs font-bold text-verdeEsperanza tracking-widest uppercase">Para Acompañantes</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="px-4 py-2 border-2 border-azulOceano text-azulOceano font-bold rounded-full hover:bg-azulOceano hover:text-white transition text-sm">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient pt-32 pb-16 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-doradoSuave opacity-20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 text-white rounded-full mb-6 backdrop-blur-sm">
+                <i class="fa-solid fa-hands-holding-child text-3xl"></i>
+            </div>
+            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-white mb-4">Guía para Acompañantes</h1>
+            <p class="font-subtitulo text-lg text-gray-100 max-w-2xl mx-auto leading-relaxed">
+                Ver sufrir a alguien que amas es doloroso y genera impotencia. Aprende a ser un pilar de apoyo seguro sin invalidar sus emociones ni sobrepasar sus límites. Pero, sobretodo, cuidando de ti.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full space-y-20">
+        
+        <section class="fade-in max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border-t-4 border-azulOceano text-center">
+            <h2 class="font-titulo1 italic text-3xl text-azulOceano mb-4">Tu rol fundamental: Devolverle el control</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                La violencia sexual es, en su núcleo, un acto donde a una persona se le arrebata el poder y el control sobre su propio cuerpo. Tu principal objetivo como acompañante (familiar, amistad, pareja) <strong>no es "salvarla" ni vengarla</strong>, sino crear un entorno donde ella recupere el control de sus decisiones.
+            </p>
+        </section>
+
+        <section class="fade-in scroll-mt-24" id="comunicacion">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="font-subtitulo font-bold text-3xl text-grisAntracita">
+                    <i class="fa-solid fa-comments text-verdeEsperanza mr-2"></i>Qué decir (y qué evitar)
+                </h2>
+                <div class="h-1 bg-gray-200 flex-grow rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden card-hover">
+                    <div class="bg-red-50 px-6 py-4 border-b border-red-100 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center font-bold"><i class="fa-solid fa-xmark"></i></div>
+                        <h3 class="font-subtitulo font-bold text-xl text-red-600">Evita decir esto:</h3>
+                    </div>
+                    <div class="p-6 space-y-5">
+                        <div>
+                            <p class="font-bold text-grisAntracita">"¿Por qué no gritaste/peleaste/te fuiste?"</p>
+                            <p class="text-sm text-gray-600 mt-1">Genera culpa. El cerebro humano se paraliza ante el terror extremo para sobrevivir; no fue una decisión consciente.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-grisAntracita">"Tienes que ir a denunciar ahora mismo."</p>
+                            <p class="text-sm text-gray-600 mt-1">Forzar una denuncia es otra forma de arrebatarle el control. El proceso legal es duro y ella debe decidir cuándo está lista.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-grisAntracita">"Intenta no pensar en eso, tienes que ser fuerte."</p>
+                            <p class="text-sm text-gray-600 mt-1">Invalida su dolor. El trauma no desaparece por ignorarlo; necesita procesarse.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-grisAntracita">"Voy a buscar a esa persona y lo voy a matar."</p>
+                            <p class="text-sm text-gray-600 mt-1">Aunque sientas mucha rabia, decir esto cambia el foco de la conversación hacia ti y tus emociones, cargándole a ella el peso de calmarte.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden card-hover">
+                    <div class="bg-green-50 px-6 py-4 border-b border-green-100 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-verdeEsperanza text-white flex items-center justify-center font-bold"><i class="fa-solid fa-check"></i></div>
+                        <h3 class="font-subtitulo font-bold text-xl text-verdeEsperanza">Mejor di esto:</h3>
+                    </div>
+                    <div class="p-6 space-y-5">
+                        <div>
+                            <p class="font-bold text-azulOceano">"Te creo."</p>
+                            <p class="text-sm text-gray-600 mt-1">Estas dos palabras son las más poderosas que puede escuchar. Ofrécele validación absoluta e incondicional.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-azulOceano">"No fue tu culpa."</p>
+                            <p class="text-sm text-gray-600 mt-1">Repítelo las veces que sea necesario. Sin importar dónde estaba, qué ropa usaba o si había bebido, la culpa es solo del agresor.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-azulOceano">"Lamento mucho que te haya pasado esto."</p>
+                            <p class="text-sm text-gray-600 mt-1">Reconoce el impacto de la situación sin intentar minimizarlo ni buscarle "el lado positivo".</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-azulOceano">"Estoy aquí para lo que necesites, a tu ritmo."</p>
+                            <p class="text-sm text-gray-600 mt-1">Le devuelve el poder de decidir si quiere hablar, si quiere silencio, o si simplemente necesita compañía.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="fade-in scroll-mt-24" id="acciones">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="font-subtitulo font-bold text-3xl text-grisAntracita">
+                    <i class="fa-solid fa-list-check text-doradoSuave mr-2"></i>Acciones prácticas de apoyo
+                </h2>
+                <div class="h-1 bg-gray-200 flex-grow rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-azulOceano card-hover">
+                    <div class="w-12 h-12 bg-blue-50 text-azulOceano rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h3 class="font-subtitulo font-bold text-lg text-grisAntracita mb-2">Ayuda con lo cotidiano</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        El trauma agota la energía. En lugar de decir "avísame si necesitas algo" (lo cual requiere que ella piense), ofrece acciones concretas: "Te preparé comida", "Lavaré los platos", "Voy a sacar a pasear a tu perro".
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-verdeEsperanza card-hover">
+                    <div class="w-12 h-12 bg-cyan-50 text-verdeEsperanza rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3 class="font-subtitulo font-bold text-lg text-grisAntracita mb-2">Filtra la información</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Protege su espacio. Si otras personas se enteran y empiezan a preguntar, ofrécete para ser tú quien responda los mensajes o detenga los chismes. Crea una burbuja de seguridad a su alrededor.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-moradoMedio card-hover">
+                    <div class="w-12 h-12 bg-purple-50 text-moradoMedio rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="font-subtitulo font-bold text-lg text-grisAntracita mb-2">Acompañamiento institucional</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Si decide ir al hospital o al Ministerio Público, ofrécete a ir físicamente con ella. Puedes llevarle agua, un suéter, cargar su celular, o simplemente tomarle la mano mientras espera.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in bg-grisAntracita p-8 md:p-12 rounded-3xl shadow-xl text-white relative overflow-hidden">
+            <div class="absolute right-0 bottom-0 opacity-10 transform translate-x-1/4 translate-y-1/4">
+                <i class="fa-solid fa-battery-half text-9xl"></i>
+            </div>
+            <div class="relative z-10 max-w-3xl">
+                <span class="text-doradoSuave font-bold tracking-widest uppercase text-sm mb-2 block">Autocuidado</span>
+                <h2 class="font-titulo1 italic text-3xl md:text-4xl text-white mb-4">La fatiga por compasión</h2>
+                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    Sostener emocionalmente a alguien que ha sufrido violencia es agotador. Es completamente normal que sientas enojo, tristeza profunda, insomnio o ansiedad. A esto se le llama <strong>trauma vicario o trauma secundario</strong>.
+                </p>
+                <ul class="space-y-3 font-texto text-gray-200 mb-8">
+                    <li><i class="fa-solid fa-caret-right text-verdeEsperanza mr-2"></i>No puedes servir agua de un vaso vacío. Cuida tu alimentación y sueño.</li>
+                    <li><i class="fa-solid fa-caret-right text-verdeEsperanza mr-2"></i>Busca tu propia red de apoyo o un espacio terapéutico para desahogar tu frustración (sin romper la confidencialidad de la víctima).</li>
+                    <li><i class="fa-solid fa-caret-right text-verdeEsperanza mr-2"></i>Establece límites si sientes que te estás quebrando.</li>
+                </ul>
+                <a href="directorio.html#lineas-emergencia" class="inline-flex items-center text-verdeEsperanza font-bold hover:text-white transition">
+                    Ver líneas de apoyo psicológico gratuitas <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h3 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h3>
+                    </div>
+                    <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
+                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto</h4>
+                    <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
+                            <a href="https://wa.me/525535538561" target="_blank" class="hover:text-white transition">55 3553 8561</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda y Donaciones | Cosiendo Alas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azulOceano: '#653a82',     
+                        verdeEsperanza: '#42c3d9', 
+                        doradoSuave: '#fcc352',    
+                        grisAntracita: '#2b1045',  
+                        moradoMedio: '#8e62b1',
+                        azulCielo: '#53a0cc',
+                        turquesaClaro: '#5dcad4',
+                        lavandaSuave: '#afb0de',
+                        fondoPagina: '#f8f6fb', 
+                    },
+                    fontFamily: {
+                        titulo1: ['Playfair Display', 'serif'],
+                        subtitulo: ['Montserrat', 'sans-serif'],
+                        texto: ['Source Sans Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #2b1045 0%, #653a82 50%, #42c3d9 100%); }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(101, 58, 130, 0.15); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between h-full items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <img class="h-10 w-10 object-contain transition-transform group-hover:scale-110" src="home.svg" alt="Logo" onerror="this.src='https://placehold.co/100x100?text=CA'; this.style.borderRadius='50%'">
+                    <div>
+                        <span class="block font-subtitulo font-extrabold text-xl text-azulOceano tracking-wide">COSIENDO ALAS</span>
+                        <span class="block text-xs font-bold text-verdeEsperanza tracking-widest uppercase">Apoya el proyecto</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="px-4 py-2 border-2 border-azulOceano text-azulOceano font-bold rounded-full hover:bg-azulOceano hover:text-white transition text-sm">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient pt-32 pb-16 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-doradoSuave opacity-20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-48 h-48 bg-turquesaClaro opacity-20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 text-white rounded-full mb-6 backdrop-blur-sm">
+                <i class="fa-solid fa-hand-holding-heart text-3xl"></i>
+            </div>
+            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-white mb-4">Tu apoyo reconstruye vidas</h1>
+            <p class="font-subtitulo text-lg text-gray-100 max-w-2xl mx-auto leading-relaxed">
+                Nuestra labor de acompañamiento jurídico y contención emocional es gratuita para las víctimas. Mantener este espacio vivo y seguro es posible gracias a ti.
+            </p>
+            
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#donaciones" class="px-6 py-3 bg-doradoSuave text-grisAntracita font-bold rounded-full hover:bg-white hover:text-azulOceano transition shadow-lg">
+                    Hacer un Donativo
+                </a>
+                <a href="#comunidad" class="px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-azulOceano transition">
+                    Membresías
+                </a>
+                <a href="#tienda" class="px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-azulOceano transition">
+                    Tienda con Causa
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full space-y-20">
+        
+        <section class="fade-in max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-sm border-l-8 border-verdeEsperanza flex flex-col md:flex-row items-center gap-8">
+            <div class="w-20 h-20 bg-green-50 text-verdeEsperanza rounded-full flex-shrink-0 flex items-center justify-center text-3xl">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div>
+                <h2 class="font-subtitulo font-bold text-2xl text-grisAntracita mb-2">Transparencia Radical</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Cada peso recaudado a través de nuestra tienda, membresías y donativos se destina a tres pilares fundamentales: <strong>1)</strong> Asesorías y peritajes legales gratuitos. <strong>2)</strong> Terapias psicológicas de emergencia. <strong>3)</strong> Creación de materiales de apoyo y divulgación.
+                </p>
+            </div>
+        </section>
+
+        <section class="fade-in scroll-mt-24" id="donaciones">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="font-subtitulo font-bold text-3xl text-grisAntracita">
+                    <i class="fa-solid fa-circle-dollar-to-slot text-azulCielo mr-2"></i>Donaciones Directas
+                </h2>
+                <div class="h-1 bg-gray-200 flex-grow rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 card-hover relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10"></div>
+                    <h3 class="font-subtitulo font-bold text-2xl text-azulOceano mb-4">Transferencia Bancaria</h3>
+                    <p class="text-gray-600 mb-6">Haz una donación directa desde tu aplicación bancaria. Cualquier cantidad hace la diferencia.</p>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg font-texto text-sm mb-6 space-y-2 border border-gray-200">
+                        <p><strong class="text-grisAntracita">Banco:</strong> [Nombre del Banco]</p>
+                        <p><strong class="text-grisAntracita">Nombre:</strong> Cosiendo Alas A.C.</p>
+                        <p><strong class="text-grisAntracita">Cuenta:</strong> 0000 0000 00</p>
+                        <p class="flex items-center justify-between">
+                            <span><strong class="text-grisAntracita">CLABE:</strong> 000 000 0000000000 0</span>
+                            <button class="text-verdeEsperanza hover:text-azulOceano" onclick="alert('CLABE copiada al portapapeles')" title="Copiar CLABE"><i class="fa-regular fa-copy"></i></button>
+                        </p>
+                    </div>
+                    <p class="text-xs text-gray-500 italic">*Si requieres recibo deducible de impuestos, escríbenos a cosiendo.tus.alas@gmail.com con tu comprobante.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 card-hover relative overflow-hidden flex flex-col justify-center">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-yellow-50 rounded-bl-full -z-10"></div>
+                    <h3 class="font-subtitulo font-bold text-2xl text-doradoSuave mb-4">PayPal o Tarjeta</h3>
+                    <p class="text-gray-600 mb-6">Haz una donación rápida y segura a través de PayPal. Puedes elegir hacer una aportación única o programar un apoyo mensual.</p>
+                    
+                    <div class="flex flex-col gap-4">
+                        <a href="#" class="w-full text-center px-6 py-4 bg-[#003087] text-white font-bold rounded-lg hover:bg-[#001c56] transition shadow-md flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-paypal text-xl"></i> Donar con PayPal
+                        </a>
+                        <a href="#" class="w-full text-center px-6 py-4 border-2 border-doradoSuave text-doradoSuave font-bold rounded-lg hover:bg-doradoSuave hover:text-white transition flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-heart text-xl"></i> Aportación Única
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in scroll-mt-24" id="comunidad">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="font-subtitulo font-bold text-3xl text-grisAntracita">
+                    <i class="fa-solid fa-users text-moradoMedio mr-2"></i>Membresías y Comunidad
+                </h2>
+                <div class="h-1 bg-gray-200 flex-grow rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 card-hover relative overflow-hidden flex flex-col justify-center">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-orange-50 rounded-bl-full -z-10"></div>
+                    <h3 class="font-subtitulo font-bold text-2xl text-[#FF424D] mb-4"><i class="fa-brands fa-patreon mr-2"></i>Patreon</h3>
+                    <p class="text-gray-600 mb-6">Conviértete en mecenas de Cosiendo Alas. Tu aportación constante nos permite sostener los programas a largo plazo. A cambio, recibe actualizaciones de nuestro impacto, acceso a reuniones virtuales y contenido exclusivo.</p>
+                    
+                    <a href="#" target="_blank" class="w-full text-center px-6 py-4 bg-[#FF424D] text-white font-bold rounded-lg hover:bg-[#d93842] transition shadow-md flex items-center justify-center gap-2">
+                        Ver niveles en Patreon
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 card-hover relative overflow-hidden flex flex-col justify-center">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full -z-10"></div>
+                    <h3 class="font-subtitulo font-bold text-2xl text-[#FF0000] mb-4"><i class="fa-brands fa-youtube mr-2"></i>Miembros de YouTube</h3>
+                    <p class="text-gray-600 mb-6">Únete a nuestro canal oficial. Obtén insignias de lealtad, emojis personalizados y apoya directamente la producción y difusión de nuestra serie de análisis "Desde la Orilla".</p>
+                    
+                    <a href="#" target="_blank" class="w-full text-center px-6 py-4 border-2 border-[#FF0000] text-[#FF0000] font-bold rounded-lg hover:bg-[#FF0000] hover:text-white transition flex items-center justify-center gap-2">
+                        Unirme al canal
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in scroll-mt-24" id="tienda">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="font-subtitulo font-bold text-3xl text-grisAntracita">
+                    <i class="fa-solid fa-store text-verdeEsperanza mr-2"></i>Productos con Causa
+                </h2>
+                <div class="h-1 bg-gray-200 flex-grow rounded-full"></div>
+            </div>
+
+            <p class="text-gray-600 mb-8 max-w-2xl text-lg">
+                Lleva contigo un recordatorio de nuestra misión. Todas las ganancias de estos productos financian directamente los programas de apoyo de Cosiendo Alas. 
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center">
+                        <img src="https://placehold.co/400x400/f8f6fb/653a82?text=Tote+Bag" alt="Tote Bag" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verdeEsperanza text-white text-xs font-bold px-3 py-1 rounded-full">Más vendido</span>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="font-subtitulo font-bold text-lg text-azulOceano mb-1">Tote Bag "Sin Miedo"</h3>
+                        <p class="text-gray-500 text-sm mb-3">Bolsa de manta 100% algodón ecológico.</p>
+                        <p class="font-bold text-xl text-grisAntracita mb-4">$250 MXN</p>
+                        <a href="https://wa.me/525535538561?text=Hola,%20me%20interesa%20comprar%20la%20Tote%20Bag%20Sin%20Miedo" target="_blank" class="mt-auto text-center w-full py-2 bg-azulOceano text-white rounded-lg font-bold hover:bg-moradoMedio transition">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center">
+                        <img src="https://placehold.co/400x400/f8f6fb/653a82?text=Taza" alt="Taza" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="font-subtitulo font-bold text-lg text-azulOceano mb-1">Taza Cosiendo Alas</h3>
+                        <p class="text-gray-500 text-sm mb-3">Cerámica blanca, diseño de colibrí y frase empoderadora.</p>
+                        <p class="font-bold text-xl text-grisAntracita mb-4">$180 MXN</p>
+                        <a href="https://wa.me/525535538561?text=Hola,%20me%20interesa%20comprar%20la%20Taza" target="_blank" class="mt-auto text-center w-full py-2 bg-azulOceano text-white rounded-lg font-bold hover:bg-moradoMedio transition">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center">
+                        <img src="https://placehold.co/400x400/f8f6fb/653a82?text=Pin" alt="Pin Metálico" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="font-subtitulo font-bold text-lg text-azulOceano mb-1">Pin Metálico</h3>
+                        <p class="text-gray-500 text-sm mb-3">Pin esmaltado con nuestro logo oficial para tu mochila o chamarra.</p>
+                        <p class="font-bold text-xl text-grisAntracita mb-4">$100 MXN</p>
+                        <a href="https://wa.me/525535538561?text=Hola,%20me%20interesa%20comprar%20el%20Pin" target="_blank" class="mt-auto text-center w-full py-2 bg-azulOceano text-white rounded-lg font-bold hover:bg-moradoMedio transition">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden flex items-center justify-center">
+                        <img src="https://placehold.co/400x400/f8f6fb/653a82?text=Libreta" alt="Libreta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="font-subtitulo font-bold text-lg text-azulOceano mb-1">Libreta "Sanar"</h3>
+                        <p class="text-gray-500 text-sm mb-3">Hojas punteadas ecológicas para escribir o dibujar tu proceso.</p>
+                        <p class="font-bold text-xl text-grisAntracita mb-4">$200 MXN</p>
+                        <a href="https://wa.me/525535538561?text=Hola,%20me%20interesa%20comprar%20la%20Libreta" target="_blank" class="mt-auto text-center w-full py-2 bg-azulOceano text-white rounded-lg font-bold hover:bg-moradoMedio transition">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-8 bg-gray-50 rounded-xl p-6 text-center border border-gray-200">
+                <p class="text-gray-600 font-texto">
+                    <i class="fa-solid fa-truck-fast text-azulOceano mr-2"></i> Hacemos envíos a todo México. El costo de envío se cotiza al momento de hacer tu pedido.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h3 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h3>
+                    </div>
+                    <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
+                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto</h4>
+                    <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
+                            <a href="https://wa.me/525535538561" target="_blank" class="hover:text-white transition">55 3553 8561</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
